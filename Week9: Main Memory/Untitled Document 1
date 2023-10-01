@@ -1,0 +1,27 @@
+Pagin Hardware with TLB:
+	TLB: nhanh hơn
+	80% tìm được trong TLB, 20% không tìm được
+	=> TGTB: 0.8*10 + 0.2 *20
+	
+Memory protection:
+	char *s1 = "Hello"
+	s1[1] = 't';
+	
+	char s2[] ="Hello";
+	s2[1] = 't';
+	
+	Về cú pháp: s1 vẫn được, con trỏ + index trả ra giá trị
+	S1: nằm trong vùng nhớ bảo vệ
+		-) giả sử khai 1 trỏ: char *s2 = "Hello"; , trình biên dịch biết 2 con trỏ trỏ đến vùng nhớ chung => Cùng trỏ
+		-) khi đó nếu sửa s1, s2 sẽ bị sửa => "Hello" phải được bảo vệ 
+	Solve: s1 = new char[10];
+		s1[1] = 't' => được
+		
+Xem silde 33,34,35: valid, invalid
+
+Shared Pages: giữa các process khác nhau (36)
+	- Thay vì tạo các page riêng cho từng process, dùng page chung nhiều process cùng dùng (nếu theo cấp phát lúc đầu => kông thể làm) 
+	- VD: slide 37: dungf chung thư vienj lib 1,2,3,4
+	
+Structure of Page table: (38)
+	

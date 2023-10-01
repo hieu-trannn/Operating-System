@@ -1,0 +1,11 @@
+Process		Start_Time	Run_time
+Process9	0	 		1
+Process8	1	 		2
+Process6	3	 		3
+Process4	6	 		5
+Process7	11	 		6
+Process5	17	 		7
+Process10	24	 		9
+Process1	33	 		10
+Process2	43	 		15
+Process3	58	 		20

@@ -1,0 +1,26 @@
+Trong chương trình, hàm A trả về kết quả cho hàm B: Hàm A trả cho Stack, hàm B lấy từ Stack
+Để quản lý Stack, có 1 con trỏ: Stack Pointer: nhớ vị trí thanh ghi hiện tại 
+	Data section: global variable
+Một chương trình có thể có nhiều process
+
+Memory Layout: (high -> low):
+	argc, argv
+	stack: lưu: int a (biến tạm thời),...
+	heap: malloc,..
+	uninitial data: int a, ... (biến global)
+	initial data: int a = 16 (global)
+	text
+
+Trạng thái process (state): new, running (instruction executed), waiting, ready (process wait to be assigned to a processor), terminated (run exit -> terminated)
+
+Process Control Block (PCB): lưu các thông tin: process state, program counter....
+
+Thread: luồng: tương tự 1 process. Trong process có nhiều Thread, chạy song song với nhau. Giữa các process không chia sẻ nhau bộ nhớ (mặc định). Giữa các thread trong cùng 1 process thì sẽ truy cập được bộ nhớ của nhau.
+	Mỗi thread chạy 1 code khác nhau, sẽ sử dụng thanh ghi khác nhau, program counter khác nhau
+
+Process Scheduling: Hệ điều hành đa nhiệm, cùng 1 thời điểm ta mở nhiều process khác nhau. Ta cần điều phối để  chạy process trong các CPU core. Nhiệm vụ điều phối: Process Scheduler: chỉ quan tâm process nào ở trạng thái Ready Queue và Wait Queue
+	Ready, Wait Queue: Các PCB móc nối với nhau (danh sách liên kết)
+
+Context Switch: chuyển từ 1 process này sang 1 process khác.
+
+(Còn lại: chép bài trên onedrive)
